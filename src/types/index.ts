@@ -13,7 +13,24 @@ export type Anime = {
 			large_image_url: string;
 		};
 	};
+	title_synonyms: string[];
+	synopsis: string;
 	airing: boolean;
 	rank: number;
 	genres: Genre[];
+	score: number;
+};
+
+export type Character = {
+	mal_id: number;
+	images: {
+		webp: {
+			image_url: string;
+			small_image_url: string;
+		};
+	};
+	name: string;
+	name_kanji: string;
+	nicknames: string[];
+	about: string;
 };

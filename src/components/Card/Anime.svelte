@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Anime } from 'src/types';
+	import Blinking from '../shared/Blinking.svelte';
 	export let anime: Anime;
 </script>
 
@@ -18,10 +19,7 @@
 		<p
 			class="absolute flex top-0 right-0 rounded-tr-lg rounded-bl-lg bg-red-500 py-1 px-2 text-sm text-white"
 		>
-			<svg height="20" width="20" class="blinking">
-				<circle cx="7" cy="10" r="4" fill="white" />
-				Sorry, your browser does not support inline SVG.
-			</svg>
+			<Blinking />
 			Live
 		</p>
 	{/if}

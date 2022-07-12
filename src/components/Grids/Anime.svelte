@@ -4,7 +4,7 @@
 	export let animes: Anime[];
 </script>
 
-<div class="flex flex-wrap gap-10">
+<div class="flex flex-wrap gap-10 justify-between">
 	{#each animes as anime}
 		<AnimeCard {anime} />
 	{/each}

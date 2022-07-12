@@ -7,7 +7,7 @@
 </script>
 
 <div class="flex flex-col border-2 border-indigo-900 rounded-lg">
-	<div class="bg-indigo-300 rounded-t-lg p-2">
+	<div class="bg-indigo-900 text-white rounded-t-lg p-2">
 		<p>{title}</p>
 	</div>
 	<div class="p-2 flex flex-col items-center gap-y-2">

@@ -1,4 +1,4 @@
-import type { Anime, Genre, Filter, AnimeType } from 'src/types';
+import type { Anime, Genre, Filter, AnimeType, Character } from 'src/types';
 
 export async function getAnimes(queries: {
 	filter?: Filter;
@@ -22,4 +22,10 @@ export async function getAllGenres(): Promise<Genre[]> {
 	}
 
 	return [{ name: 'Action', mal_id: 1 }];
+}
+
+export async function getRandomCharacter(): Promise<Character> {
+	const res = await fetch('https://api.jikan.moe/v4/random/characters');
+	const data = await res.json();
+	return data.data as Character;
 }
