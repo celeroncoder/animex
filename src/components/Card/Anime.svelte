@@ -1,4 +1,7 @@
 <script lang="ts">
+	// @ts-ignore
+	import Image from 'svelte-image';
+
 	import type { Anime } from 'src/types';
 	import Blinking from '../shared/Blinking.svelte';
 	export let anime: Anime;
@@ -6,7 +9,7 @@
 
 <a
 	href="/anime/{anime.mal_id}"
-	class="flex flex-col items-center relative shadow-md duration-500 hover:shadow-2xl rounded-lg h-96 w-64 cursor-pointer"
+	class="flex flex-col items-center relative shadow-md duration-500 hover:shadow-2xl rounded-lg h-80 w-64 cursor-pointer"
 >
 	<!-- Rank Badge -->
 	<p
@@ -25,7 +28,7 @@
 		</p>
 	{/if}
 
-	<img src={anime.images.webp.image_url} class="h-80 w-full rounded-t-lg" alt={anime.title} />
+	<Image src={anime.images.webp.image_url} class="w-full rounded-t-lg" alt={anime.title} />
 	<div class="h-16 flex items-center justify-center w-full">
 		<p class="text-center text-indigo-900">{anime.title}</p>
 	</div>

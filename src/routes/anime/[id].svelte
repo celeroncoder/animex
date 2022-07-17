@@ -1,8 +1,10 @@
 <script lang="ts">
-	import Blinking from '../../components/shared/Blinking.svelte';
+	// @ts-ignore
+	import Image from 'svelte-image';
 
 	import type { Anime } from 'src/types';
 	import GenreGrid from '../../components/Grids/Genre.svelte';
+	import Blinking from '../../components/shared/Blinking.svelte';
 
 	export let anime: Anime;
 
@@ -19,10 +21,10 @@
 		style="flex:0.2;"
 		class="flex w-full flex-col items-center text-center justify-center relative gap-1"
 	>
-		<img
+		<Image
 			src={anime.images.webp.large_image_url}
 			alt={anime.title}
-			class="rounded-lg w-full cursor-pointer"
+			class="rounded-lg w-full min-h-fit cursor-pointer"
 		/>
 		{#if anime.airing}
 			<p

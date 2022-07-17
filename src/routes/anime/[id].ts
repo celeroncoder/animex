@@ -1,7 +1,7 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import { getAnimeById } from '../../utils';
 
-export const get: RequestHandler = async ({ params }) => {
+export const GET: RequestHandler = async ({ params }) => {
 	try {
 		const id = parseInt(params.id);
 
