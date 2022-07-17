@@ -13,6 +13,15 @@ export async function getAnimes(queries: {
 	return data.data.map((anime: any) => anime as Anime);
 }
 
+export async function getAnimeById(id: number, full: boolean = false): Promise<Anime> {
+	const url = `https://api.jikan.moe/v4/anime/${id}${full ? '/full' : ''}`;
+
+	const res = await fetch(url);
+	const data = await res.json();
+
+	return data.data as Anime;
+}
+
 export async function getAllGenres(): Promise<Genre[]> {
 	const res = await fetch('https://api.jikan.moe/v4/genres/anime');
 	const data = await res.json();

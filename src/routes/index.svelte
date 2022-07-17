@@ -24,7 +24,7 @@
 
 	<div class="flex gap-8 w-full">
 		<div style="flex:0.8;" class="w-3/4 flex flex-col gap-y-4">
-			<div class="flex items-center gap-x-2 justify-between">
+			<div class="flex items-center gap-4 justify-between">
 				<AnimeCarousel animes={popularAnimes.slice(0, 5)} />
 				<LargeCharacterCard character={randomCharacter} />
 			</div>

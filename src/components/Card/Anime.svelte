@@ -4,7 +4,8 @@
 	export let anime: Anime;
 </script>
 
-<div
+<a
+	href="/anime/{anime.mal_id}"
 	class="flex flex-col items-center relative shadow-md duration-500 hover:shadow-2xl rounded-lg h-96 w-64 cursor-pointer"
 >
 	<!-- Rank Badge -->
@@ -28,4 +29,4 @@
 	<div class="h-16 flex items-center justify-center w-full">
 		<p class="text-center text-indigo-900">{anime.title}</p>
 	</div>
-</div>
+</a>
